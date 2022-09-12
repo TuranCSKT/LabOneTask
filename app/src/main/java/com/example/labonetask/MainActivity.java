@@ -2,6 +2,7 @@ package com.example.labonetask;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private TextView tvMain;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +18,12 @@ public class MainActivity extends AppCompatActivity {
         this.tvMain = findViewById(R.id.tvMain);
     }
 
-    public void onBtnClick(View view) {
+    public void onBtnChangeTextClick(View view) {
         this.tvMain.setText("Information: Text was changed!!!");
+    }
+
+    public void onBtnChangeColorClick(View view) {
+        this.tvMain.setTextColor(Color.argb(255,255,0,0));
+
     }
 }
